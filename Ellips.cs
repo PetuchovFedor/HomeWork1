@@ -11,7 +11,7 @@ namespace HomeWork1
         public int A { get; set; }
         public int B { get; set; } 
         
-        public Ellips (int a, int b)
+        public Ellips (Point centerpoint, int a, int b)
         {
             if (a <= 0)
             {
