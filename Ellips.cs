@@ -8,30 +8,30 @@ namespace HomeWork1
 {
     public class Ellips
     {
-        public int A { get; set; }
-        public int B { get; set; } 
+        public int HorizontalRadius { get; set; }
+        public int VerticalRadius { get; set; } 
         
-        public Ellips (Point centerpoint, int a, int b)
+        public Ellips (Point centerPoint, int horizontalradius, int verticalradius)
         {
-            if (a <= 0)
+            if (horizontalradius <= 0)
             {
                 throw new ArgumentException("The radius is less than or equal to zero");
             }
-            if (b <= 0)
+            if (verticalradius <= 0)
             {
                 throw new ArgumentException("The radius is less than or equal to zero");
             }
 
-            A = a;
-            B = b;
+            HorizontalRadius = horizontalradius;
+            VerticalRadius = verticalradius;
         }
         public double GetSquare()
         {
-            return Math.Round(Math.PI * A * B, 2);
+            return Math.Round(Math.PI * HorizontalRadius * VerticalRadius, 2);
         }
         public double GetLength()
         {
-            return Math.Round(Math.PI * (A + B), 2); 
+            return Math.Round(Math.PI * (HorizontalRadius + VerticalRadius), 2); 
         }
     }
 }
